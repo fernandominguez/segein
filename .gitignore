@@ -1,0 +1,19 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# c9 directory
+.c9
+
+# Dependency directory
+node_modules
+
+# Mongodb data directory
+mongod
+data
