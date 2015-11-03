@@ -15,5 +15,5 @@ pids
 node_modules
 
 # Mongodb data directory
-mongod
 data
+mongod

@@ -1,10 +1,17 @@
 {
- "name": "segein",
- "version": "0.1.0",
- "dependencies": {
-  "body-parser"     : "^1.5.1",
-  "express"         : "^4.7.1",
-  "method-override" : "^2.1.2",
-  "mongoose"        : "~3.6.11"
- }
+  "name": "segein",
+  "version": "0.1.0",
+  "main": "app.js",
+  "dependencies": {
+    "atob"            : "*",
+    "body-parser"     : "^1.5.1",
+    "express"         : "^4.7.1",
+    "jade"            : "*",
+    "jsonwebtoken"    : "0.4.0",
+    "method-override" : "^2.1.2",
+    "mongoose"        : "~3.6.11",
+    "morgan"          : "latest",
+    "nib"             : "^1.0.4",
+    "stylus"          : "^0.49.1"
+  }
 }

@@ -1,0 +1,30 @@
+body(ng-app="segeinRegistry")
+  div(class="navbar navbar-inverse navbar-fixed-top", role="navigation", data-ng-controller="HomeCtrl")
+    div(class="container")
+      div(class="navbar-header")
+        button(type"button", class="navbar-toggle collapsed", data-toggle="collapse", data-target=".navbar-collapse")
+          span(class="sr-only").
+            Toggle navigation
+          span(class="icon-bar")
+          span(class="icon-bar")
+          span(class="icon-bar")
+        a(class="navbar-brand", href="#").
+          SEGEIN
+      div(class="navbar-collapse collapse")
+        ul(class="nav navbar-nav")
+          li
+            a(ng-href="#/").
+              Home
+          li(data-ng-show="token")
+            a(ng-href="#/me").
+              Me
+          li(data-ng-hide="token")
+            a(ng-href="#/signin").
+              Signin
+          li(data-ng-hide="token")
+            a(ng-href="#/signup").
+              Signup
+          li(data-ng-show="token")
+            a(ng-click="logout()").
+              Logout
+  div(class="container", ng-view="")
