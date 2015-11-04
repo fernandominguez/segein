@@ -1,6 +1,7 @@
 /* Required Modules */
 var bodyParser      = require("body-parser"),
     express         = require("express"),
+    i18n            = require("i18next"),
     methodOverride  = require("method-override"),
     mongoose        = require("mongoose"),
     morgan          = require("morgan"),
@@ -26,8 +27,16 @@ var RegistryUser        = require(pathApp+"models/RegistryUser");
 var RegistryUserCtrl    = require(pathApp+"controllers/RegistryUser");
 var RegistryRecordCtrl  = require(pathApp+"controllers/RegistryRecord");
 
+/* Internationalization */
+i18n.init({
+  saveMissing : true,
+  debug       : true
+});
+i18n.setLng(config.LANGUAGE);
+
 /* Middlewares */
 var app = express();
+app.use(i18n.handle);
 app.set("views", pathApp+"views");
 app.set("view engine", "jade");
 app.use(express.static(pathPublic));
@@ -49,6 +58,8 @@ app.use(function(req, res, next) {
   res.setHeader("Access-Control-Allow-Headers", "X-Requested-With,content-type,Authorization");
   next();
 });
+
+i18n.registerAppHelper(app);
 
 /* API routes */
 var router = express.Router();

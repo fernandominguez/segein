@@ -1,0 +1,32 @@
+{
+    "app": {
+        "togglenavigation": "Toggle navigation",
+        "home": "Home",
+        "me": "Me",
+        "signin": "Sign in",
+        "signup": "Sign up",
+        "logout": "Logout",
+        "brand": "SEGEIN",
+        "homeheader": "Internal Management Services",
+        "homemsg": "In this system you can see following actions;",
+        "homesignin": "Sign in",
+        "homesignup": "Sign up",
+        "homelogout": "Logout",
+        "homeme": "Click 'Me' link whe you sign in",
+        "metitle": "Your Details",
+        "meemail": "Email: __EMAIL__",
+        "mepassword": "Password: __PASSWORD__",
+        "signintitle": "Sign in",
+        "signinemail": "Email",
+        "signinpassword": "Password",
+        "signinbutton": "Sign in",
+        "signuptitle": "Sign up",
+        "signupemail": "Email",
+        "signuppassword": "Password",
+        "signupbutton": "Sign up"
+    },
+    "err": {
+        "urlBase64Decode": "Illegal base64url string!",
+        "addregistryuser2": "User already exists!"
+    }
+}

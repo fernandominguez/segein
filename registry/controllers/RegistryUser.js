@@ -2,11 +2,19 @@
 
 /* Required Imports */
 var atob      = require("atob"),
+    i18n      = require("i18next"),
     jwt       = require("jsonwebtoken"),
     mongoose  = require("mongoose");
 
 /* Import Configuration */
 var config = require("../config");
+
+/* Internationalization */
+i18n.init({
+  saveMissing : true,
+  debug       : true
+});
+i18n.setLng(config.LANGUAGE);
 
 /* Import Model */
 var RegistryUser = mongoose.model("RegistryUser");
@@ -17,7 +25,7 @@ function urlBase64Decode(str) {
     case 0:   break;
     case 2:   output += "=="; break;
     case 3:   output += "=";  break;
-    default:  throw "Illegal base64url string!";
+    default:  throw i18n.t("err.urlBase64Decode");
   }
   return atob(output);
 };
@@ -46,7 +54,7 @@ exports.addRegistryUser = function(req, res) {
   function(err, registryUser) {
     if(err) { res.json({ type: false, data: "Error ocurred: "+err }); }
     else {
-      if (registryUser) { res.json({ type: false, data: "User already exists!" }); }
+      if (registryUser) { res.json({ type: false, data: i18n.t("err.addregistryuser2")}); }
       else {
         var RegistryUserModel = new RegistryUser();
         RegistryUserModel.email     = req.body.email;

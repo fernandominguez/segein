@@ -2,17 +2,11 @@ div(class="row")
   div(class="col-lg-12")
     div(class="panel panel-primary")
       div(class="panel-heading")
-        strong.
-          Internal Management Services
+        strong= t("app.homeheader")
       div(class="panel-body")
-        p.
-          In this system you can see following actions;
+        p= t("app.homemsg")
         ul
-          li.
-            Signin
-          li.
-            Signup
-          li.
-            Logout
-          li.
-            Click "Me" link when you signin
+          li= t("app.homesignin")
+          li= t("app.homesignup")
+          li= t("app.homelogout")
+          li= t("app.homeme")

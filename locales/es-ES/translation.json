@@ -1,0 +1,32 @@
+{
+    "app": {
+        "togglenavigation": "Pulsador de Navegación",
+        "home": "Inicio",
+        "me": "Yo",
+        "signin": "Iniciar sesión",
+        "signup": "Registrarse",
+        "logout": "Desconectar",
+        "brand": "SEGEIN",
+        "homeheader": "Servicios de Gestión Interna",
+        "homemsg": "En este sistema podrás ver las siguientes acciones;",
+        "homesignin": "Iniciar sesión",
+        "homesignup": "Registrarse",
+        "homelogout": "Desconectar",
+        "homeme": "Pulsa el enlace 'Yo' una vez inicies sesión",
+        "metitle": "Tus Datos",
+        "meemail": "Correo electrónico: __EMAIL__",
+        "mepassword": "Contraseña: __PASSWORD__",
+        "signintitle": "Iniciar sesión",
+        "signinemail": "Correo electrónico",
+        "signinpassword": "Contraseña",
+        "signinbutton": "Iniciar sesión",
+        "signuptitle": "Registrarse",
+        "signupemail": "Correo electrónico",
+        "signuppassword": "Contraseña",
+        "signupbutton": "Registrar"
+    },
+    "err": {
+        "urlBase64Decode": "Cadena base64url ilegal!",
+        "addregistryuser2": "El usuario ya existe!"
+    }
+}

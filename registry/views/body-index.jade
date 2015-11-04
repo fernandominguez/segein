@@ -3,28 +3,21 @@ body(ng-app="segeinRegistry")
     div(class="container")
       div(class="navbar-header")
         button(type"button", class="navbar-toggle collapsed", data-toggle="collapse", data-target=".navbar-collapse")
-          span(class="sr-only").
-            Toggle navigation
+          span(class="sr-only")= t("app.togglenavigation")
           span(class="icon-bar")
           span(class="icon-bar")
           span(class="icon-bar")
-        a(class="navbar-brand", href="#").
-          SEGEIN
+        a(class="navbar-brand", href="#")= t("app.brand")
       div(class="navbar-collapse collapse")
         ul(class="nav navbar-nav")
           li
-            a(ng-href="#/").
-              Home
+            a(ng-href="#/")= t("app.home")
           li(data-ng-show="token")
-            a(ng-href="#/me").
-              Me
+            a(ng-href="#/me")= t("app.me")
           li(data-ng-hide="token")
-            a(ng-href="#/signin").
-              Signin
+            a(ng-href="#/signin")= t("app.signin")
           li(data-ng-hide="token")
-            a(ng-href="#/signup").
-              Signup
+            a(ng-href="#/signup")= t("app.signup")
           li(data-ng-show="token")
-            a(ng-click="logout()").
-              Logout
+            a(ng-click="logout()")= t("app.logout")
   div(class="container", ng-view="")
