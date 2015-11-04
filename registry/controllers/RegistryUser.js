@@ -1,4 +1,4 @@
-/* File: registry/backend/controllers/RegistryUser.js */
+/* File: registry/controllers/RegistryUser.js */
 
 /* Required Imports */
 var atob      = require("atob"),

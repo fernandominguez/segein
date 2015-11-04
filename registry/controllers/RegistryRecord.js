@@ -1,4 +1,4 @@
-//File: registry/backend/controllers/RegistryRecord.js
+//File: registry/controllers/RegistryRecord.js
 var mongoose = require("mongoose");
 
 var RegistryRecord = mongoose.model("RegistryRecord");
