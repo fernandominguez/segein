@@ -1,19 +1,21 @@
 # segein
 Internal Management Services
 
-API REST with MVC structure using MONGODB.
+REST api with MVC structure.
 
-Themed frontend with internationalization system.
+Themed frontend with internationalization system on both client/server sides.
 
-Backend uses:
+Backend makes use of:
 * nodejs
 * express
 * mongodb
 * jade
 * i18n
 
-Frontend uses:
+Frontend makes use of:
 * bootstrap
 * angularjs
 * jquery
 * ngStorage
+
+License: Gnu Lesser GeneralL Public License v.3
