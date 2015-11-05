@@ -22,7 +22,7 @@ angular
             window.location = "/";
           }
         },
-        function() { $rootScope.error = "Failed to signin"; }
+        function() { $rootScope.error = $.i18n.t("err.signin"); }
       )
     };
 
@@ -40,19 +40,19 @@ angular
             window.location = "/";
           }
         },
-        function() { $rootScope.error = "Failed to signup"; }
+        function() { $rootScope.error = $.i18n.t("err.signup"); }
       )
     };
 
     $scope.me = function() {
       Main.me(function(res) { $scope.user = res; },
-              function() { $rootScope.error = "Failed to fetch details"; }
+              function() { $rootScope.error = $.i18n.t("err.me"); }
       )
     };
 
     $scope.logout = function() {
       Main.logout(function() { window.location = "/"; },
-                  function() { alert("Failed to logout!"); }
+                  function() { alert($.i18n.t("err.logout")); }
       );
     };
 
@@ -65,7 +65,7 @@ angular
   ["$rootScope","$scope","$location","Main",
   function($rootScope, $scope, $location, Main) {
     Main.me(function(res) { $scope.user = res; },
-            function() { $rootScope.error = 'Failed to fetch details'; }
+            function() { $rootScope.error = $.i18n.t("err.me");; }
     );
   }
 ]);

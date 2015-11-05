@@ -6,6 +6,13 @@ angular
   "$routeProvider",
   "$httpProvider",
   function ($routeProvider, $httpProvider) {
+    $.i18n.init({
+      saveMissing : true,
+      debug       : true,
+      resGetPath  : "locales/__lng__/__ns__.json"
+    });
+    $.i18n.setLng("es-ES");
+
     $routeProvider
       .when("/",        { templateUrl: "views/body-home",    controller: "HomeCtrl" })
       .when("/signin",  { templateUrl: "views/body-signin",  controller: "HomeCtrl" })

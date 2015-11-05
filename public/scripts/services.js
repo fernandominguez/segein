@@ -18,7 +18,7 @@ angular
         case 0:   break;
         case 2:   output += "=="; break;
         case 3:   output += "=";  break;
-        default:  throw "Illegal base64url string!";
+        default:  throw $.i18n.t("urlbase64decode");
       }
       return window.atob(output);
     }

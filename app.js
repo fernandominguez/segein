@@ -30,7 +30,8 @@ var RegistryRecordCtrl  = require(pathApp+"controllers/RegistryRecord");
 /* Internationalization */
 i18n.init({
   saveMissing : true,
-  debug       : true
+  debug       : true,
+  resGetPath  : "public/locales/__lng__/__ns__.json"
 });
 i18n.setLng(config.LANGUAGE);
 

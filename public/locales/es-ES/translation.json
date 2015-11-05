@@ -26,7 +26,13 @@
         "signupbutton": "Registrar"
     },
     "err": {
-        "urlBase64Decode": "Cadena base64url ilegal!",
-        "addregistryuser2": "El usuario ya existe!"
+        "urlbase64decode": "Cadena base64url ilegal!",
+        "addregistryuser": "El usuario ya existe!",
+        "finduser": "Correo electrónico o contraseña incorrectos",
+        "errorocurred": "Ocurrió un error",
+        "signin": "Error al iniciar sesión",
+        "signup": "Error al registrarse",
+        "me": "Error al recuperar los detalles",
+        "logout": "Error al desconectar!"
     }
 }

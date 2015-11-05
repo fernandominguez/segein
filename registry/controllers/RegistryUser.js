@@ -12,7 +12,8 @@ var config = require("../config");
 /* Internationalization */
 i18n.init({
   saveMissing : true,
-  debug       : true
+  debug       : true,
+  resGetPath  : "public/locales/__lng__/__ns__.json"
 });
 i18n.setLng(config.LANGUAGE);
 
@@ -37,10 +38,10 @@ exports.findUser = function(req, res) {
 
   RegistryUser.findOne({ email: req.body.email, password: req.body.password },
   function(err, registryUser) {
-    if(err) { res.json({ type: false, data: "Error ocurred: "+err }); }
+    if(err) { res.json({ type: false, data: i18n.t("err.errorocurred")+": "+err }); }
     else {
       if (registryUser) { res.json({ type: true,  data: registryUser, token: registryUser.token }); }
-      else { res.json({ type: false, data: "Incorrect email or password" }); }
+      else { res.json({ type: false, data: i18n.t("err.finduser") }); }
     }
   });
 };
@@ -52,9 +53,9 @@ exports.addRegistryUser = function(req, res) {
 
   RegistryUser.findOne({ email: req.body.email },
   function(err, registryUser) {
-    if(err) { res.json({ type: false, data: "Error ocurred: "+err }); }
+    if(err) { res.json({ type: false, data: i18n.t("err.errorocurred")+": "+err }); }
     else {
-      if (registryUser) { res.json({ type: false, data: i18n.t("err.addregistryuser2")}); }
+      if (registryUser) { res.json({ type: false, data: i18n.t("err.addregistryuser")}); }
       else {
         var RegistryUserModel = new RegistryUser();
         RegistryUserModel.email     = req.body.email;
@@ -62,7 +63,7 @@ exports.addRegistryUser = function(req, res) {
         RegistryUserModel.save(function(err, registryUser) {
           registryUser.token = jwt.sign(registryUser, config.JWT_SECRET);
           registryUser.save(function(err, newRegistryUser) {
-            if (err) { res.json({ type: false, data: "Error ocurred: "+err }); }
+            if (err) { res.json({ type: false, data: i18n.t("err.errorocurred")+": "+err }); }
             res.json({ type: true, data: newRegistryUser, token: newRegistryUser.token });
           });
         });
@@ -105,7 +106,7 @@ exports.updateRegistryUser = function(req, res) {
       registryUser.token    = req.body.token;
 
       registryUser.save(function(err) {
-        if(err) { res.json({ type: false, data: "Error ocurred: "+err }); }
+        if(err) { res.json({ type: false, data: i18n.t("err.errorocurred")+": "+err }); }
         res.json({ type: true, data: registryUser });
       });
     }
@@ -121,7 +122,7 @@ exports.deleteRegistryUser = function(req, res) {
     { email: req.body.email, password: req.body.password },
     function(err, registryUser) {
       registryUser.remove(function(err) {
-        if(err) { res.json({ type: false, data: "Error ocurred: "+err }); }
+        if(err) { res.json({ type: false, data: i18n.t("err.errorocurred")+": "+err }); }
         res.json({ type: true });
       });
     }

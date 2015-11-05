@@ -26,7 +26,13 @@
         "signupbutton": "Sign up"
     },
     "err": {
-        "urlBase64Decode": "Illegal base64url string!",
-        "addregistryuser2": "User already exists!"
+        "urlbase64decode": "Illegal base64url string!",
+        "addregistryuser": "User already exists!",
+        "finduser": "Incorrect email or password",
+        "errorocurred": "Error ocurred",
+        "signin": "Failed to signin",
+        "signup": "Failed to signup",
+        "me": "Failed to fetch details",
+        "logout": "Failed to logout!"
     }
 }
