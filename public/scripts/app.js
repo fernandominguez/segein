@@ -11,7 +11,7 @@ angular
       debug       : true,
       resGetPath  : "locales/__lng__/__ns__.json"
     });
-    $.i18n.setLng("es-ES");
+    $.i18n.setLng(config.LANGUAGE);
 
     $routeProvider
       .when("/",        { templateUrl: "views/body-home",    controller: "HomeCtrl" })
