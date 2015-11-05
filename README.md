@@ -18,4 +18,4 @@ Frontend makes use of:
 * jquery
 * ngStorage
 
-License: Gnu Lesser GeneralL Public License v.3
+License: Gnu Lesser General Public License v.3
