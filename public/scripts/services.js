@@ -1,7 +1,7 @@
 "use strict";
 
 angular
-.module("segeinRegistry")
+.module("segein")
 .factory(
   "Main",
   ["$http","$localStorage",

@@ -23,27 +23,27 @@ var RegistryRecord      = require(pathApp+"models/RegistryRecord"),
 var router = express.Router();
 
 router.get("/", function(req, res) {
-  res.render("index", { theme: config.THEME });
+  res.render("layout", { theme: config.THEME });
 });
 
-router.get("/views/body-home", function(req, res) {
-  res.render("body-home");
+router.get("/views/app/home", function(req, res) {
+  res.render("app/home");
 });
 
-router.get("/views/body-me", function(req, res) {
-  res.render("body-me", { user: RegistryUserCtrl.getUserFromToken(req) });
+router.get("/views/app/me", function(req, res) {
+  res.render("app/me", { user: RegistryUserCtrl.getUserFromToken(req) });
 });
 
-router.get("/views/body-registry", function(req, res) {
-  res.render("body-registry", { records: RegistryRecordCtrl.findAllRegistryRecords(req) });
+router.get("/views/registry/registry", function(req, res) {
+  res.render("registry/registry", { records: RegistryRecordCtrl.findAllRegistryRecords(req) });
 });
 
-router.get("/views/body-signin", function(req, res) {
-  res.render("body-signin");
+router.get("/views/app/signin", function(req, res) {
+  res.render("app/signin");
 });
 
-router.get("/views/body-signup", function(req, res) {
-  res.render("body-signup");
+router.get("/views/app/signup", function(req, res) {
+  res.render("app/signup");
 });
 
 router.route("/signin")

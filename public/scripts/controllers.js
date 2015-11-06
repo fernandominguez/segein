@@ -2,7 +2,7 @@
 
 /* Controllers */
 angular
-.module("segeinRegistry")
+.module("segein")
 .controller(
   "HomeCtrl",
   ["$rootScope","$scope","$location","$localStorage","Main",

@@ -1,7 +1,7 @@
 "use strict";
 
 angular
-.module("segeinRegistry", ["ngStorage","ngRoute","angular-loading-bar"])
+.module("segein", ["ngStorage","ngRoute","angular-loading-bar"])
 .config([
   "$routeProvider",
   "$httpProvider",
@@ -14,11 +14,11 @@ angular
     $.i18n.setLng(config.LANGUAGE);
 
     $routeProvider
-      .when("/",          { templateUrl: "views/body-home",     controller: "HomeCtrl" })
-      .when("/signin",    { templateUrl: "views/body-signin",   controller: "HomeCtrl" })
-      .when("/signup",    { templateUrl: "views/body-signup",   controller: "HomeCtrl" })
-      .when("/me",        { templateUrl: "views/body-me",       controller: "HomeCtrl" })
-      .when("/registry",  { templateUrl: "views/body-registry", controller: "HomeCtrl" })
+      .when("/",          { templateUrl: "views/app/home",          controller: "HomeCtrl" })
+      .when("/signin",    { templateUrl: "views/app/signin",        controller: "HomeCtrl" })
+      .when("/signup",    { templateUrl: "views/app/signup",        controller: "HomeCtrl" })
+      .when("/me",        { templateUrl: "views/app/me",            controller: "HomeCtrl" })
+      .when("/registry",  { templateUrl: "views/registry/registry", controller: "HomeCtrl" })
       .otherwise({ redirectTo: "/" });
 
     $httpProvider

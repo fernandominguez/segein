@@ -32,6 +32,8 @@
         "urlbase64decode": "Illegal base64url string!",
         "addregistryuser": "User already exists!",
         "finduser": "Incorrect email or password",
+        "addregistryrole": "Role already exists!",
+        "findrole": "Incorrect role id",
         "errorocurred": "Error ocurred",
         "signin": "Failed to signin",
         "signup": "Failed to signup",
