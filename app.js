@@ -3,7 +3,6 @@ var bodyParser      = require("body-parser"),
     express         = require("express"),
     i18n            = require("i18next"),
     methodOverride  = require("method-override"),
-    mongoose        = require("mongoose"),
     morgan          = require("morgan"),
     nib             = require("nib"),
     stylus          = require("stylus");
@@ -14,18 +13,6 @@ var pathApp     = __dirname+"/registry/",
 
 /* Import Configuration */
 var config = require(pathApp+"config");
-
-/* Connect to DB */
-mongoose.connect(config.DATABASE, function(err, res) {
-  if(err) { throw err; }
-  console.log('Connected to Database.');
-});
-
-/* Import Controllers and Models */
-var RegistryRecord      = require(pathApp+"models/RegistryRecord");
-var RegistryUser        = require(pathApp+"models/RegistryUser");
-var RegistryUserCtrl    = require(pathApp+"controllers/RegistryUser");
-var RegistryRecordCtrl  = require(pathApp+"controllers/RegistryRecord");
 
 /* Internationalization */
 i18n.init({
@@ -63,46 +50,7 @@ app.use(function(req, res, next) {
 i18n.registerAppHelper(app);
 
 /* API routes */
-var router = express.Router();
-
-router.get("/", function(req, res) {
-  res.render("index", { theme: config.THEME });
-});
-
-router.get("/views/body-home", function(req, res) {
-  res.render("body-home");
-});
-
-router.get("/views/body-me", function(req, res) {
-  res.render("body-me", { user: RegistryUserCtrl.getUserFromToken(req) });
-});
-
-router.get("/views/body-signin", function(req, res) {
-  res.render("body-signin");
-});
-
-router.get("/views/body-signup", function(req, res) {
-  res.render("body-signup");
-});
-
-router.route("/signin")
-  .post(RegistryUserCtrl.findUser);
-
-router.route("/signup")
-  .post(RegistryUserCtrl.addRegistryUser);
-
-router.route("/me")
-  .get(RegistryUserCtrl.isAuthorized, RegistryUserCtrl.findUser);
-
-router.route('/registry')
-  .get(RegistryRecordCtrl.findAllRegistryRecords)
-  .post(RegistryRecordCtrl.addRegistryRecord);
-
-router.route('/registry/:id')
-  .get(RegistryRecordCtrl.findById)
-  .put(RegistryRecordCtrl.updateRegistryRecord)
-  .delete(RegistryRecordCtrl.deleteRegistryRecord);
-
+var router = require(pathApp+"routes");
 app.use(router);
 
 /* Caught Exceptions */

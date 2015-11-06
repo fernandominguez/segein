@@ -3,6 +3,7 @@
         "togglenavigation": "Pulsador de Navegación",
         "home": "Inicio",
         "me": "Yo",
+        "registry": "Registro",
         "signin": "Iniciar sesión",
         "signup": "Registrarse",
         "logout": "Desconectar",
@@ -16,6 +17,7 @@
         "metitle": "Tus Datos",
         "meemail": "Correo electrónico: __EMAIL__",
         "mepassword": "Contraseña: __PASSWORD__",
+        "registrytitle": "Registro",
         "signintitle": "Iniciar sesión",
         "signinemail": "Correo electrónico",
         "signinpassword": "Contraseña",
@@ -33,6 +35,7 @@
         "signin": "Error al iniciar sesión",
         "signup": "Error al registrarse",
         "me": "Error al recuperar los detalles",
+        "registry": "Error al cargar la aplicación de registro",
         "logout": "Error al desconectar!"
     }
 }

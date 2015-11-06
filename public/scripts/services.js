@@ -45,6 +45,9 @@ angular
       me: function(success, error) {
         $http.get(baseUrl+"/me").success(success).error(error);
       },
+      registry: function(success, error) {
+        $http.get(baseUrl+"/registry").success(success).error(error);
+      },
       logout: function(success) {
         changeUser({});
         delete $localStorage.token;

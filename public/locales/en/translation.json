@@ -3,6 +3,7 @@
         "togglenavigation": "Toggle navigation",
         "home": "Home",
         "me": "Me",
+        "registry": "Registry",
         "signin": "Sign in",
         "signup": "Sign up",
         "logout": "Logout",
@@ -16,6 +17,7 @@
         "metitle": "Your Details",
         "meemail": "Email: __EMAIL__",
         "mepassword": "Password: __PASSWORD__",
+        "registrytitle": "Registry",
         "signintitle": "Sign in",
         "signinemail": "Email",
         "signinpassword": "Password",
@@ -33,6 +35,7 @@
         "signin": "Failed to signin",
         "signup": "Failed to signup",
         "me": "Failed to fetch details",
+        "registry": "Failed to load the registry app",
         "logout": "Failed to logout!"
     }
 }

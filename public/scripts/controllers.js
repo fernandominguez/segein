@@ -50,6 +50,12 @@ angular
       )
     };
 
+    $scope.registry = function() {
+      Main.registry(function(res) { $scope.user = res; },
+              function() { $rootScope.error = $.i18n.t("err.registry"); }
+      )
+    };
+
     $scope.logout = function() {
       Main.logout(function() { window.location = "/"; },
                   function() { alert($.i18n.t("err.logout")); }

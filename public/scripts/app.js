@@ -14,10 +14,11 @@ angular
     $.i18n.setLng(config.LANGUAGE);
 
     $routeProvider
-      .when("/",        { templateUrl: "views/body-home",    controller: "HomeCtrl" })
-      .when("/signin",  { templateUrl: "views/body-signin",  controller: "HomeCtrl" })
-      .when("/signup",  { templateUrl: "views/body-signup",  controller: "HomeCtrl" })
-      .when("/me",      { templateUrl: "views/body-me",      controller: "HomeCtrl" })
+      .when("/",          { templateUrl: "views/body-home",     controller: "HomeCtrl" })
+      .when("/signin",    { templateUrl: "views/body-signin",   controller: "HomeCtrl" })
+      .when("/signup",    { templateUrl: "views/body-signup",   controller: "HomeCtrl" })
+      .when("/me",        { templateUrl: "views/body-me",       controller: "HomeCtrl" })
+      .when("/registry",  { templateUrl: "views/body-registry", controller: "HomeCtrl" })
       .otherwise({ redirectTo: "/" });
 
     $httpProvider
