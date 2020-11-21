@@ -10,7 +10,7 @@
     "jade"            : "*",
     "jsonwebtoken"    : ">=4.2.2",
     "method-override" : "^2.1.2",
-    "mongoose"        : "~3.6.11",
+    "mongoose"        : ">=5.7.5",
     "morgan"          : "latest",
     "nib"             : "^1.0.4",
     "stylus"          : "^0.49.1"
